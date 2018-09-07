@@ -160,13 +160,9 @@ def test_method_2():
     'x = 0; x > round(1.23)'
 ])
 def test_function_parser(code):
-    output = helper.run({
-        'DC_CODE': code,
-        'DC_SOLUTION': code,
-        'DC_SCT': 'Ex().check_function("round").check_args(0).has_equal_value()'
-    })
-    assert output['correct']
-
+    s = setup_state(code, code)
+    s.check_function("round").check_args(0).has_equal_value()
+    
 @pytest.mark.parametrize('sct', [
     "Ex().check_function('round').check_args('ndigits').has_equal_value()",
     "Ex().check_correct(check_object('x').has_equal_value(), check_function('round').check_args('ndigits').has_equal_value())",
