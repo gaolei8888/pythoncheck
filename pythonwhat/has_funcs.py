@@ -140,9 +140,9 @@ def has_equal_ast(incorrect_msg=None,
     """
     rep = Reporter.active_reporter
 
-    if utils.v2_only():
-        state.assert_is_not(['object_assignments'], 'has_equal_ast', ['check_object'])
-        state.assert_is_not(['function_calls'], 'has_equal_ast', ['check_function'])
+    # if utils.v2_only():
+    state.assert_is_not(['object_assignments'], 'has_equal_ast', ['check_object'])
+    state.assert_is_not(['function_calls'], 'has_equal_ast', ['check_function'])
 
     if code and incorrect_msg is None:
         raise InstructorError("If you manually specify the code to match inside has_equal_ast(), "

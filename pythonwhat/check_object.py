@@ -43,8 +43,8 @@ def check_object(index, missing_msg=None, expand_msg=None, state=None, typestr="
     """
 
     # Only do the assertion if PYTHONWHAT_V2_ONLY is set to '1'
-    if v2_only():
-        state.assert_root('check_object')
+    # if v2_only():
+    state.assert_root('check_object')
 
     if missing_msg is None:
         missing_msg = "__JINJA__:Did you define the {{typestr}} `{{index}}` without errors?"
