@@ -1,8 +1,8 @@
-from pythonwhat.State import State
-from pythonwhat.utils import check_str, check_dict, check_process
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import TestFail
-from pythonwhat.utils import include_v1
+from pythoncheck.State import State
+from pythoncheck.utils import check_str, check_dict, check_process
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import TestFail
+from pythoncheck.utils import include_v1
 from functools import partial
 import os
 
@@ -78,12 +78,12 @@ def allow_errors():
 
 def prep_context():
     cntxt = { 'success_msg': success_msg }
-    from pythonwhat.check_syntax import v2_check_functions
-    from pythonwhat.probe import build_probe_context
+    from pythoncheck.check_syntax import v2_check_functions
+    from pythoncheck.probe import build_probe_context
     imports = ["from inspect import Parameter as param",
-               "from pythonwhat.signatures import sig_from_params, sig_from_obj",
-               "from pythonwhat.State import set_converter",
-               "from pythonwhat.check_syntax import F, Ex"]
+               "from pythoncheck.signatures import sig_from_params, sig_from_obj",
+               "from pythoncheck.State import set_converter",
+               "from pythoncheck.check_syntax import F, Ex"]
     [ exec(line, None, cntxt) for line in imports ]
 
     # only if PYTHONWHAT_V2_ONLY is not set, support v1

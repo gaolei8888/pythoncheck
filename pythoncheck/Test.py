@@ -1,8 +1,8 @@
 import re
-from pythonwhat.Feedback import Feedback
+from pythoncheck.Feedback import Feedback
 import numpy as np
 import pandas as pd
-from pythonwhat.tasks import *
+from pythoncheck.tasks import *
 
 """
 This file contains all tests that can be done on specific objects. All tests are represented

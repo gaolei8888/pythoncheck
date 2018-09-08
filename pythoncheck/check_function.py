@@ -1,10 +1,10 @@
-from pythonwhat.Reporter import Reporter
-from pythonwhat.check_funcs import part_to_child, StubState
-from pythonwhat.tasks import getSignatureInProcess
-from pythonwhat.utils import get_ord, get_times
-from pythonwhat.Test import Test
-from pythonwhat.Feedback import Feedback, InstructorError
-from pythonwhat.parsing import IndexedDict
+from pythoncheck.Reporter import Reporter
+from pythoncheck.check_funcs import part_to_child, StubState
+from pythoncheck.tasks import getSignatureInProcess
+from pythoncheck.utils import get_ord, get_times
+from pythoncheck.Test import Test
+from pythoncheck.Feedback import Feedback, InstructorError
+from pythoncheck.parsing import IndexedDict
 from functools import partial
 
 def bind_args(signature, args_part):

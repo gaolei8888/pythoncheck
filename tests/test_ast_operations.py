@@ -1,5 +1,5 @@
 import pytest
-from pythonwhat.State import State
+from pythoncheck.State import State
 
 def parsesWithoutError(s):
     try:

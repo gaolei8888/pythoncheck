@@ -1,7 +1,7 @@
-from pythonwhat.State import State
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import BiggerTest
-import pythonwhat.utils
+from pythoncheck.State import State
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import BiggerTest
+import pythoncheck.utils
 
 def test_object_accessed(name,
                          times=1,
@@ -50,7 +50,7 @@ def test_object_accessed(name,
             for orig, full_name in student_mappings.items():
                 if name.startswith(full_name): stud_name = name.replace(full_name, orig)
 
-        add = " at least %s" % pythonwhat.utils.get_times(times) if times > 1 else ""
+        add = " at least %s" % pythoncheck.utils.get_times(times) if times > 1 else ""
         not_accessed_msg = "Have you accessed `%s`%s?" % (stud_name, add)
 
 

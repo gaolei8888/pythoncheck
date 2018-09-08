@@ -3,7 +3,7 @@ import itertools
 import inspect
 from functools import partial
 from collections import OrderedDict
-from pythonwhat import test_funcs
+from pythoncheck import test_funcs
 
 TEST_NAMES = [
     "test_mc",

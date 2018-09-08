@@ -1,5 +1,5 @@
 import pytest
-from pythonwhat.local import setup_state
+from pythoncheck.local import setup_state
 import helper
 
 def test_has_expr_override_pass():

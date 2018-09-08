@@ -4,8 +4,8 @@ import helper
 import importlib
 
 def relooooad():
-    import pythonwhat.check_syntax
-    importlib.reload(pythonwhat.check_syntax)
+    import pythoncheck.check_syntax
+    importlib.reload(pythoncheck.check_syntax)
 
 @pytest.fixture
 def data():

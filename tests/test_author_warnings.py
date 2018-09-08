@@ -2,10 +2,10 @@ import pytest
 import helper
 import ast
 
-from pythonwhat.local import setup_state
-from pythonwhat.Feedback import InstructorError
+from pythoncheck.local import setup_state
+from pythoncheck.Feedback import InstructorError
 from inspect import signature, Signature, Parameter
-from pythonwhat.check_funcs import assert_ast
+from pythoncheck.check_funcs import assert_ast
 
 # Actually wrong usage that breaks --------------------------------------------
 
@@ -90,7 +90,7 @@ def test_has_import():
 
 # Incorrect usage that wouldn't throw exceptions ------------------------------
 
-from pythonwhat.check_syntax import v2_check_functions
+from pythoncheck.check_syntax import v2_check_functions
 
 
 def test_has_printout_on_root():

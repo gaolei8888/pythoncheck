@@ -1,6 +1,6 @@
 import pytest
 import helper
-from pythonwhat.Reporter import Reporter
+from pythoncheck.Reporter import Reporter
 from difflib import Differ
 
 def message(output, patt):
@@ -142,7 +142,7 @@ def test_check_method(stu, patt, cols, cole):
         'DC_CODE': stu,
         'DC_SOLUTION': "df.groupby('b').a.value_counts(normalize = True)",
         'DC_SCT': """
-from pythonwhat.signatures import sig_from_obj
+from pythoncheck.signatures import sig_from_obj
 import pandas as pd
 Ex().check_function('df.groupby').check_args(0).has_equal_ast()
 Ex().check_function('df.groupby.a.value_counts', signature = sig_from_obj(pd.Series.value_counts)).check_args('normalize').has_equal_ast()

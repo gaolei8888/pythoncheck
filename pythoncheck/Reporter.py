@@ -1,7 +1,7 @@
-from pythonwhat.Feedback import Feedback
+from pythoncheck.Feedback import Feedback
 import re
 import markdown2
-from pythonwhat.Test import TestFail, Test
+from pythoncheck.Test import TestFail, Test
 
 """
 This file holds the reporter class.

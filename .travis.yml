@@ -8,7 +8,7 @@ before_install:
   - pip install -r requirements.txt
   - pip install -e .
 
-script: pytest -m "not compiled" --cov=pythonwhat
+script: pytest -m "not compiled" --cov=pythoncheck
 
 after_success: codecov --token=$CODECOV_TOKEN
 
@@ -20,5 +20,5 @@ deploy:
   on:
     tags: true
     distributions: sdist bdist_wheel
-    repo: datacamp/pythonwhat
+    repo: datacamp/pythoncheck
   skip_upload_docs: true

@@ -1,6 +1,6 @@
 import helper
 import pytest
-from pythonwhat.local import setup_state
+from pythoncheck.local import setup_state
 
 @pytest.mark.parametrize('stu, correct', [
     ('', False),

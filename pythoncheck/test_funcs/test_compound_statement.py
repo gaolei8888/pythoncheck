@@ -1,13 +1,13 @@
-from pythonwhat.check_funcs import check_part, check_node, multi
-from pythonwhat.Reporter import Reporter
-from pythonwhat.check_funcs import check_node, check_part, check_part_index, call, fix_format, stringify, with_context
-from pythonwhat.check_logic import multi, quiet
-from pythonwhat.has_funcs import has_equal_part_len, has_equal_part, has_equal_value, has_equal_output
-from pythonwhat.check_has_context import has_context
+from pythoncheck.check_funcs import check_part, check_node, multi
+from pythoncheck.Reporter import Reporter
+from pythoncheck.check_funcs import check_node, check_part, check_part_index, call, fix_format, stringify, with_context
+from pythoncheck.check_logic import multi, quiet
+from pythoncheck.has_funcs import has_equal_part_len, has_equal_part, has_equal_value, has_equal_output
+from pythoncheck.check_has_context import has_context
 from functools import partial, update_wrapper
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import EqualTest, Test
-from pythonwhat import utils
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import EqualTest, Test
+from pythoncheck import utils
 
 def test_if_else(index=1,
                  test=None,
@@ -34,15 +34,15 @@ def test_if_else(index=1,
       index (int): index of the function call to be checked. Defaults to 1.
       test: this argument holds the part of code that will be ran to check the condition test of the if statement.
         It should be passed as a lambda expression or a function definition. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the condition test of
+        be other pythoncheck test functions, and they will be tested specifically on only the condition test of
         the if statement.
       body: this argument holds the part of code that will be ran to check the body of the if statement.
         It should be passed as a lambda expression or a function definition. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the body of
+        be other pythoncheck test functions, and they will be tested specifically on only the body of
         the if statement.
       orelse: this argument holds the part of code that will be ran to check the else part of the if statement.
         It should be passed as a lambda expression or a function definition. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the else part of
+        be other pythoncheck test functions, and they will be tested specifically on only the else part of
         the if statement.
       expand_message (bool): if true, feedback messages will be expanded with :code:`in the ___ of the if statement on
         line ___`. Defaults to True. If False, :code:`test_if_else()` will generate no extra feedback.
@@ -114,15 +114,15 @@ def test_for_loop(index=1,
       index (int): index of the function call to be checked. Defaults to 1.
       for_iter: this argument holds the part of code that will be ran to check the sequence of the for loop.
         It should be passed as a lambda expression or a function. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the sequence part of
+        be other pythoncheck test functions, and they will be tested specifically on only the sequence part of
         the for loop.
       body: this argument holds the part of code that will be ran to check the body of the for loop.
         It should be passed as a lambda expression or a function. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the body of
+        be other pythoncheck test functions, and they will be tested specifically on only the body of
         the for loop.
       orelse: this argument holds the part of code that will be ran to check the else part of the for loop.
         It should be passed as a lambda expression or a function. The functions that are ran should
-        be other pythonwhat test functions, and they will be tested specifically on only the else part of
+        be other pythoncheck test functions, and they will be tested specifically on only the else part of
         the for loop.
       expand_message (bool): if true, feedback messages will be expanded with :code:`in the ___ of the for loop on
         line ___`. Defaults to True. If False, :code:`test_for_loop()` will generate no extra feedback.
@@ -182,15 +182,15 @@ def test_while_loop(index=1,
         index (int): index of the function call to be checked. Defaults to 1.
         test: this argument holds the part of code that will be ran to check the condition test of the while loop.
           It should be passed as a lambda expression or a function definition. The functions that are ran should
-          be other pythonwhat test functions, and they will be tested specifically on only the condition test of
+          be other pythoncheck test functions, and they will be tested specifically on only the condition test of
           the while loop.
         body: this argument holds the part of code that will be ran to check the body of the while loop.
           It should be passed as a lambda expression or a function definition. The functions that are ran should
-          be other pythonwhat test functions, and they will be tested specifically on only the body of
+          be other pythoncheck test functions, and they will be tested specifically on only the body of
           the while loop.
         orelse: this argument holds the part of code that will be ran to check the else part of the while loop.
           It should be passed as a lambda expression or a function definition. The functions that are ran should
-          be other pythonwhat test functions, and they will be tested specifically on only the else part of
+          be other pythoncheck test functions, and they will be tested specifically on only the else part of
           the while loop.
         expand_message (bool): if true, feedback messages will be expanded with :code:`in the ___ of the while loop on
           line ___`. Defaults to True. If False, `test_for_loop()` will generate no extra feedback.
@@ -270,7 +270,7 @@ def test_function_definition(name,
             be tested. Defaults to True.
         body: this arguments holds the part of the code that will be ran to check the body of the function
             definition. It should be passed as a lambda expression or a function. The functions that are
-            ran should be other pythonwhat test functions, and they will be tested specifically on only the
+            ran should be other pythoncheck test functions, and they will be tested specifically on only the
             body of the for loop. Defaults to None.
         results (list(list)): a list of lists representing arguments that should be passed to the defined
             function. These arguments are passed to the function in the student environment and the solution

@@ -1,7 +1,7 @@
 import unittest
 import helper
 import pytest
-from pythonwhat.Feedback import InstructorError
+from pythoncheck.Feedback import InstructorError
 
 class TestFChain(unittest.TestCase):
 
@@ -281,7 +281,7 @@ for k, code in TestOverride.EXPRESSIONS.items():
 # Test SCT Ex syntax (copied from sqlwhat)  -----------------------------------
 
 import pytest
-from pythonwhat.check_syntax import Ex, F, state_dec
+from pythoncheck.check_syntax import Ex, F, state_dec
 
 @pytest.fixture
 def addx():

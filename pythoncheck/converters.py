@@ -1,5 +1,5 @@
 import inspect
-import pythonwhat
+import pythoncheck
 
 def get_manual_converters():
 

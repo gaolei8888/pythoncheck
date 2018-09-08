@@ -3,17 +3,17 @@ import inspect
 import string
 from copy import copy
 from functools import partial
-from pythonwhat.parsing import TargetVars, FunctionParser, ObjectAccessParser, parser_dict
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Feedback import Feedback, InstructorError
-from pythonwhat.Test import Test
-from pythonwhat import signatures
-from pythonwhat.converters import get_manual_converters
+from pythoncheck.parsing import TargetVars, FunctionParser, ObjectAccessParser, parser_dict
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Feedback import Feedback, InstructorError
+from pythoncheck.Test import Test
+from pythoncheck import signatures
+from pythoncheck.converters import get_manual_converters
 from collections.abc import Mapping
 from itertools import chain
 from jinja2 import Template
 import asttokens
-from pythonwhat.utils_ast import wrap_in_module
+from pythoncheck.utils_ast import wrap_in_module
 
 class Context(Mapping):
     def __init__(self, context=None, prev=None):

@@ -1,9 +1,9 @@
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import Test, EqualTest
-from pythonwhat.Feedback import Feedback, InstructorError
-from pythonwhat.State import State
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import Test, EqualTest
+from pythoncheck.Feedback import Feedback, InstructorError
+from pythoncheck.State import State
 from functools import singledispatch
-from pythonwhat.check_funcs import check_part_index
+from pythoncheck.check_funcs import check_part_index
 
 MSG_INCORRECT_LOOP = "FMT:Have you used the correct iterator variable names? Was expecting `{sol_vars}` but got `{stu_vars}`."
 MSG_INCORRECT_WITH = "FMT:Make sure to use the correct context variable names. Was expecting `{sol_vars}` but got `{stu_vars}`."

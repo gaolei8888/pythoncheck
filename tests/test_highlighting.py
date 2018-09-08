@@ -1,6 +1,6 @@
 import pytest
 import helper
-from pythonwhat.local import setup_state
+from pythoncheck.local import setup_state
 
 def test_disable_highlighting():
     s = setup_state(stu_code = "round(1.234, 2)", sol_code = "round(2.345, 2)")

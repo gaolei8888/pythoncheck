@@ -1,11 +1,11 @@
-from pythonwhat.tasks import getResultInProcess, getOutputInProcess, getErrorInProcess, ReprFail, setUpNewEnvInProcess, breakDownNewEnvInProcess
-from pythonwhat.has_funcs import has_part
-from pythonwhat.check_logic import multi
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import Test, EqualTest, TestFail
-from pythonwhat.Feedback import Feedback, InstructorError
-from pythonwhat.utils import get_ord
-from pythonwhat.utils_ast import assert_ast
+from pythoncheck.tasks import getResultInProcess, getOutputInProcess, getErrorInProcess, ReprFail, setUpNewEnvInProcess, breakDownNewEnvInProcess
+from pythoncheck.has_funcs import has_part
+from pythoncheck.check_logic import multi
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import Test, EqualTest, TestFail
+from pythoncheck.Feedback import Feedback, InstructorError
+from pythoncheck.utils import get_ord
+from pythoncheck.utils_ast import assert_ast
 from functools import partial
 import ast
 

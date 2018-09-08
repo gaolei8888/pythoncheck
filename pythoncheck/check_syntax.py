@@ -1,8 +1,8 @@
-from pythonwhat.check_wrappers import scts
-from pythonwhat.State import State
-from pythonwhat.probe import Node, Probe, TEST_NAMES
-from pythonwhat.utils import include_v1
-from pythonwhat import test_funcs
+from pythoncheck.check_wrappers import scts
+from pythoncheck.State import State
+from pythoncheck.probe import Node, Probe, TEST_NAMES
+from pythoncheck.utils import include_v1
+from pythoncheck import test_funcs
 from functools import partial, reduce, wraps
 import inspect
 import copy

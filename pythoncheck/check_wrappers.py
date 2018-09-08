@@ -1,8 +1,8 @@
-from pythonwhat.check_funcs import check_part, check_part_index, check_node
-from pythonwhat.has_funcs import has_equal_part
-from pythonwhat import check_funcs, has_funcs, check_logic, check_object
-from pythonwhat.check_function import check_function
-from pythonwhat.check_has_context import has_context
+from pythoncheck.check_funcs import check_part, check_part_index, check_node
+from pythoncheck.has_funcs import has_equal_part
+from pythoncheck import check_funcs, has_funcs, check_logic, check_object
+from pythoncheck.check_function import check_function
+from pythoncheck.check_has_context import has_context
 
 from functools import partial
 import inspect

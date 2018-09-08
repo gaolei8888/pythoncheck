@@ -1,5 +1,5 @@
 import unittest
-from pythonwhat import utils
+from pythoncheck import utils
 
 class TestUtils(unittest.TestCase):
 

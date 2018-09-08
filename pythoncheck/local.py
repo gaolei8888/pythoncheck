@@ -1,9 +1,9 @@
 import io
 import random
 
-from pythonwhat.check_syntax import Ex
-from pythonwhat.State import State
-from pythonwhat.Reporter import Reporter
+from pythoncheck.check_syntax import Ex
+from pythoncheck.State import State
+from pythoncheck.Reporter import Reporter
 from contextlib import redirect_stdout
 
 class StubShell(object):

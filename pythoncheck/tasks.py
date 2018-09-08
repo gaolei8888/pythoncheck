@@ -1,16 +1,16 @@
-from pythonwhat import utils
+from pythoncheck import utils
 import os
 import dill
 import pickle
-import pythonwhat
+import pythoncheck
 import ast
 import inspect
 from copy import deepcopy
 from pickle import PicklingError
-from pythonwhat.utils_env import set_context_vals, assign_from_ast
+from pythoncheck.utils_env import set_context_vals, assign_from_ast
 from contextlib import contextmanager
 from functools import partial, wraps, update_wrapper
-from pythonwhat.Feedback import InstructorError
+from pythoncheck.Feedback import InstructorError
 
 def process_task(f):
     """Decorator to (optionally) run function in a process."""
@@ -230,7 +230,7 @@ class ReprFail(object):
 
 def getRepresentation(name, process):
     obj_class = getClass(name, process)
-    converters = pythonwhat.State.State.root_state.converters
+    converters = pythoncheck.State.State.root_state.converters
     if obj_class in converters:
         repres = convert(name, dill.dumps(converters[obj_class]), process)
         if (errored(repres)):

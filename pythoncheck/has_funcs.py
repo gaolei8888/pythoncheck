@@ -1,8 +1,8 @@
-from pythonwhat.tasks import getResultInProcess, getOutputInProcess, getErrorInProcess, ReprFail, isDefinedInProcess, getOptionFromProcess, ReprFail, UndefinedValue
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import Test, EqualTest
-from pythonwhat.Feedback import Feedback, InstructorError
-from pythonwhat import utils
+from pythoncheck.tasks import getResultInProcess, getOutputInProcess, getErrorInProcess, ReprFail, isDefinedInProcess, getOptionFromProcess, ReprFail, UndefinedValue
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import Test, EqualTest
+from pythoncheck.Feedback import Feedback, InstructorError
+from pythoncheck import utils
 from functools import partial
 import re
 import copy
@@ -363,7 +363,7 @@ has_equal_error.__doc__ = """Run targeted student and solution code, and compare
 
 ## Various has tests ----------------------------------------------------------
 
-from pythonwhat.Test import StringContainsTest
+from pythoncheck.Test import StringContainsTest
 
 def has_code(text,
              pattern=True,
@@ -406,7 +406,7 @@ def has_code(text,
 
     return state
 
-from pythonwhat.Test import Test, DefinedCollTest, EqualTest
+from pythoncheck.Test import Test, DefinedCollTest, EqualTest
 
 def has_import(name,
                same_as=False,

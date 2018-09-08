@@ -1,5 +1,5 @@
 import ast
-from pythonwhat.Feedback import InstructorError
+from pythoncheck.Feedback import InstructorError
 
 def wrap_in_module(node):
     new_node = ast.Module(node)

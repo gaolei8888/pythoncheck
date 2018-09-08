@@ -1,10 +1,10 @@
 import pytest
 import helper
-from pythonwhat.local import setup_state
-from pythonwhat.Test import TestFail as TF
-from pythonwhat.Feedback import InstructorError
+from pythoncheck.local import setup_state
+from pythoncheck.Test import TestFail as TF
+from pythoncheck.Feedback import InstructorError
 from inspect import signature
-from pythonwhat.check_function import bind_args
+from pythoncheck.check_function import bind_args
 
 @pytest.mark.parametrize('arg, stu', [
         ('a', 'my_fun(1, 10)'),
@@ -42,9 +42,9 @@ def test_basic_check_function_failing():
         s.check_function('my_fun').check_args('a').has_equal_value()
 
 def test_bind_args():
-    from pythonwhat.local import setup_state
+    from pythoncheck.local import setup_state
     from inspect import signature
-    from pythonwhat.check_function import bind_args
+    from pythoncheck.check_function import bind_args
     pec = "def my_fun(a, b, *args, **kwargs): pass"
     s = setup_state(pec = pec, stu_code = "my_fun(1, 2, 3, 4, c = 5)")
     args = s._state.student_function_calls['my_fun'][0]['args']
@@ -111,7 +111,7 @@ def check_function_sig_false_override():
                 .check_args('c').has_equal_ast())
 
 def check_function_multiple_times():
-    from pythonwhat.local import setup_state
+    from pythoncheck.local import setup_state
     s = setup_state(sol_code = "print('test')",
                     stu_code = "print('test')")
     helper.passes(s.check_function('print'))
@@ -137,7 +137,7 @@ def test_method_1():
                     pec = "import pandas as pd; df = pd.DataFrame({'a': [1, 2, 3], 'b': ['x', 'x', 'y']})")
     helper.passes(s.check_function('df.groupby').check_args(0).has_equal_value())
     helper.passes(s.check_function('df.groupby.sum', signature = False))
-    from pythonwhat.signatures import sig_from_obj
+    from pythoncheck.signatures import sig_from_obj
     import pandas as pd
     helper.passes(s.check_function('df.groupby.sum', signature = sig_from_obj(pd.Series.sum)))
 
@@ -147,7 +147,7 @@ def test_method_2():
                     stu_code = code,
                     pec = "import pandas as pd; df = pd.DataFrame({'a': [1, 2, 3], 'b': ['x', 'x', 'y']})")
     helper.passes(s.check_function('df.a.sum', signature = False))
-    from pythonwhat.signatures import sig_from_obj
+    from pythoncheck.signatures import sig_from_obj
     import pandas as pd
     helper.passes(s.check_function('df.a.sum', signature = sig_from_obj(pd.Series.sum)))
 

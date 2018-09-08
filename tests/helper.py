@@ -1,11 +1,11 @@
 import re
 import os
 
-from pythonwhat.local import StubProcess
+from pythoncheck.local import StubProcess
 from contextlib import redirect_stdout, contextmanager
-from pythonwhat.Test import TestFail as TF
-from pythonwhat.test_exercise import test_exercise
-from pythonwhat.check_syntax import Chain
+from pythoncheck.Test import TestFail as TF
+from pythoncheck.test_exercise import test_exercise
+from pythoncheck.check_syntax import Chain
 import io
 import pytest
 import tempfile

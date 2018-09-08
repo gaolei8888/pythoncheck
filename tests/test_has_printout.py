@@ -1,6 +1,6 @@
 import pytest
-from pythonwhat.local import setup_state
-from pythonwhat.Test import TestFail as TF
+from pythoncheck.local import setup_state
+from pythoncheck.Test import TestFail as TF
 import helper
 
 @pytest.mark.parametrize('stu, correct', [

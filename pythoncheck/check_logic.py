@@ -1,8 +1,8 @@
 from types import GeneratorType
 from functools import partial
-from pythonwhat.Reporter import Reporter
-from pythonwhat.Test import Test, TestFail
-from pythonwhat.Feedback import Feedback, InstructorError
+from pythoncheck.Reporter import Reporter
+from pythoncheck.Test import Test, TestFail
+from pythoncheck.Feedback import Feedback, InstructorError
 import copy
 import ast
 
@@ -323,7 +323,7 @@ def set_env(state = None, **kwargs):
 def disable_highlighting(state = None):
     """Disable highlighting in the remainder of the SCT chain.
 
-    Include this function if you want to avoid that pythonwhat marks which part of the student submission is incorrect.
+    Include this function if you want to avoid that pythoncheck marks which part of the student submission is incorrect.
 
     :Examples:
 
